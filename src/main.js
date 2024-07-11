@@ -9,8 +9,8 @@ form.addEventListener("submit", searchImages);
 
 function searchImages(evt) {
     evt.preventDefault();
-    gallery.innerHTML = `<p class="info-load">Loading images, please wait...</p>`
-
+    gallery.innerHTML = `<span class="loader"></span>`;
+    
     // const q = form.imgName.value.split(" ").filter(word => {if (word !== "") {
     //         return true;
     //     }

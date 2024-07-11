@@ -4,6 +4,7 @@ import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 const gallery = document.querySelector(".gallery");
+const lightbox = new SimpleLightbox('.gallery a');
 
 function markUpMaker(data) {
     if (data.hits.length
@@ -42,7 +43,7 @@ function markUpMaker(data) {
         }).join("");
     gallery.innerHTML = markUp;
 
-    const lightbox = new SimpleLightbox('.gallery a');
+    lightbox.refresh();
 }
 
 export default markUpMaker;
